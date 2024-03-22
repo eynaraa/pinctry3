@@ -52,7 +52,12 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="index.html" class="navbar-link" data-nav-link>Solutions</a>
+            <select name="solution" id="solution" class="navbar-link" onchange="redirectToPage()">
+              <option selected disabled hidden>Solutions</option>
+              <option value="software.html">Software</option>
+              <option value="hardware.html">Hardware</option>
+              <option value="service.html">Service</option>
+            </select>
           </li>
               
           <li>
@@ -68,7 +73,7 @@
           </li>
   
           <li>
-              <a href="#contact" class="btn btn-primary">Contact Us</a>
+              <a href="contact.html" class="btn btn-primary">Contact Us</a>
           </li>
 
         </ul>
@@ -820,6 +825,17 @@
 
         <li>
           <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+        <li class="socmed">
+          
+          <a href="https://www.facebook.com/p/Pinc-Technology-Sdn-Bhd-100063452475947/" class="footer-link">
+            <i class="fa-brands fa-facebook-f fa-lg"></i>&ensp;
+          </a>
+          
+          <a href="https://www.linkedin.com/company/pinc-technology-sdn-bhd/" class="footer-link">
+            <i class="fa-brands fa-linkedin fa-xl"></i></i>&ensp;
+          </a>
         </li>
       </ul>
 
