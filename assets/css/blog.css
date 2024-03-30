@@ -1783,40 +1783,42 @@
 
 .navigation-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding-block-start: 150px;
-  height: 100px; /* Set container height to full viewport height */
+  flex-direction: column;
+  padding-block-end: 50px;
 }
 
 .navigation-links {
-  list-style-type: none;
-  margin: 0;
+  list-style: none;
   padding: 0;
-  display: flex;
-  justify-content: center;
+  margin: 0;
 }
 
 .navigation-links li {
-  margin-right: 15px; /* Adjust spacing between links */
- 
+  display: inline-block;
 }
 
-.navigation-links a {
+.navigation-links li a {
   text-decoration: none;
-  color: #9e1f63;
+  padding: 10px 20px;
+  background-color: #ccc;
+  color: #333;
+  border-radius: 5px;
 }
 
-.navigation-links a:hover {
-  text-decoration: none;
-  color: black;
+.navigation-links li a:hover {
+  background-color: #999;
 }
 
-/* Media Query for responsiveness */
-@media screen and (max-width: 600px) {
+@media (max-width: 768px) {
   .navigation-container {
-      flex-direction: column; /* Stack items vertically on small screens */
-      height: auto; /* Reset height for smaller screens */
+      
+  }
+
+  .navigation-links li {
+    display: inline-block; /* Change to display: inline-block; */
+    margin-right: 10px; /* Add spacing between links */
   }
 }
   
