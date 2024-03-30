@@ -1500,7 +1500,7 @@
      * BLOG
      */
   
-    .blog { padding-block-end: 5px; }
+    .blog { padding-block-end: 120px; }
   
     .blog-list {
       grid-template-columns: repeat(3, 1fr);
