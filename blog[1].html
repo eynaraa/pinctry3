@@ -52,27 +52,28 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="index.html" class="navbar-link" data-nav-link>Solutions</a>
+            <select name="solution" id="solution" class="navbar-link" onchange="redirectToPage()">
+              <option selected disabled hidden>Solutions</option>
+              <option value="software.html">Software</option>
+              <option value="hardware.html">Hardware</option>
+              <option value="service.html">Service</option>
+            </select>
           </li>
-
+              
           <li>
-            <a href="about.html" class="navbar-link" data-nav-link>About Us</a>
+              <a href="about.html" class="navbar-link" data-nav-link>About Us</a>
           </li>
-
+  
           <li>
-            <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
+              <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
           </li>
-
+  
           <li>
-            <a href="jobs.html" class="navbar-link" data-nav-link>Career</a>
+              <a href="jobs.html" class="navbar-link" data-nav-link>Career</a>
           </li>
-
-          <!-- <li>
-            <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
-          </li> -->
-
+  
           <li>
-            <a href="contact.html" class="btn btn-primary">Contact Us</a>
+              <a href="contact.html" class="btn btn-primary">Contact Us</a>
           </li>
 
         </ul>
@@ -628,19 +629,21 @@
 
         
 
-        
-      
-
-        
-        
-
-        
-      </section>
-      <div class="container">
+        <!-- <div class="container">
           <div class="next">
             <a href="blog.html"><p class="footer-link-2"><i class="fa-solid fa-chevron-left"></i>&ensp;&ensp;Back</p></a>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
             <a href="blog[2].html"><p class="footer-link-2">Next Page&ensp;&ensp;<i class="fa-solid fa-chevron-right"></i></p></a>
           </div>
+        </div> -->
+
+      </section>
+      
+      <div class="navigation-container">
+                
+          <ul class="navigation-links">
+              <li><a href="blog.html"><i class="fa-solid fa-chevron-left"></i>&ensp;Back</a></li>&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;
+              <li><a href="blog[2].html">Next Page&ensp;<i class="fa-solid fa-chevron-right"></i></a></li>
+          </ul>
       </div>
 
       <!-- <section class="section track" id="track">
@@ -782,6 +785,17 @@
         this.className += " active";
         });
     }
+  </script>
+  <script>
+    function redirectToPage() {
+      var selectBox = document.getElementById("solution");
+      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+  
+      if(selectedValue !== "") {
+        window.location.href = selectedValue;
+      }
+    }
+
   </script>
 
 </body>
