@@ -369,7 +369,8 @@
   .rotate-img { display: none; }
   
   .hero {
-    background-image: url("../images/jobs/job-ban2.jpg");
+    background-image: url("../images/bg-career.jpg");
+    opacity: 5;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -377,6 +378,16 @@
     min-height: 100vh;
     display: grid;
     place-items: center;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2); /* Adjust opacity here (0 to 1) */
   }
   
   .hero-banner {
@@ -447,9 +458,18 @@
 .abs-img,
 .abs-icon { display: none; }
 
-.about { padding-block-start: 180px; }
+.about { padding-block-start: 50px; }
+
+.join { margin-block-start: 80px; }
 
 .about-banner {
+  background-color: var(--independence);
+  border-radius: var(--radius-10);
+  margin-block-end: 30px;
+  border: 5px solid #9e1f63;
+}
+
+.join-banner {
   background-color: var(--independence);
   border-radius: var(--radius-10);
   margin-block-end: 30px;
@@ -461,6 +481,11 @@
   
 }
 
+.join-banner > .img-cover { 
+  border-radius: inherit; 
+  
+}
+
 .about :is(.section-subtitle, .section-text) { text-align: left; }
 
 .about :is(.section-title) { text-align: left; }
@@ -468,6 +493,18 @@
 .about :is(.section-title, .section-text) { margin-block-end: 30px; }
 
 .about-content .section-text {
+  color: black;
+}
+
+
+
+.join :is(.section-subtitle, .section-text) { text-align: left; }
+
+.join :is(.section-title) { text-align: left; }
+
+.join :is(.section-title, .section-text) { margin-block-end: 30px; }
+
+.join-content .section-text {
   color: black;
 }
 
@@ -715,7 +752,7 @@
   
   .blog { 
     padding-block-end: 120px; 
-    padding-block-start: 200px ;
+    padding-block-start: 50px ;
   }
   
   .blog .section-title { margin-block-end: 10px; text-align: center;}
@@ -724,7 +761,28 @@
     margin-block-end: 120px; 
     text-align: center;
     color: black;
+    padding: 0 80px;
+  }
+
+  .about .section-text {
     
+    margin-block-end: 50px; 
+    text-align: center;
+    color: black;
+    text-align: justify;
+  }
+
+  .join .section-join {
+    
+    margin-block-end: 50px; 
+    text-align: center;
+    color: black;
+    text-align: justify;
+  }
+
+  .blog .section-title-join {
+    margin-block-start: 50px;
+    margin-block-end: 50px;
   }
   
   .blog-list {
@@ -1162,11 +1220,28 @@
      */
   
     .about { 
-      padding-block: 180px; 
+      padding-block: 100px; 
+      background-color: white;
+    }
+
+    .join { 
+      padding-block: 50px; 
       background-color: white;
     }
   
     .about .container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 50px;
+      background-color: white;
+    
+      padding: 50px 80px;
+      color: black;
+      border-radius: 20px 20px;
+    }
+
+    .join .container {
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
@@ -1184,9 +1259,13 @@
       width: 100%;
     }
 
-    .container .about-banner img {
-      
+    .join-banner {
+      position: relative;
+      margin-block-end: 0;
+      width: 100%;
     }
+
+    
   
     .abs-img,
     .abs-icon {
@@ -1322,10 +1401,131 @@
   
     .copyright,
     .footer-list { margin-inline: 0; }
+
+    select {
+      background-color: transparent;
+      color: white;
+      border: transparent;
+      font-size: 18px;
+    }
+
+    select option {
+      color: black;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 15px;
+    }
+    
+    select optgroup {
+      color: black;
+      font-size: 15px;
+    }
     
     
     
     
+  }
+
+  .footer {
+    background-color:#9e1f63;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  
+  .container-foot {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin-right: 2px;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 10px;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-section ul li:hover{
+    color: black;
+  }
+  
+  .footer-section ul li a:hover {
+    color: black;
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+    }
+    .footer-content {
+      flex-direction: column;
+    }
+    .footer-section {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
+  .social-links a {
+  
+    display: inline-block;
+    margin-right: 10px; /* Adjust spacing between icons if needed */
+    text-decoration: none; /* Remove default underline */
+    color: white; /* Set default link color */
+    
+  }
+  
+  .social-links li a:hover {
+    color: black; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .term-links li a {
+    display: inline-block;
+    margin-right: 10px; /* Adjust spacing between links if needed */
+    text-decoration: none; /* Remove default underline */
+    color: white; /* Set default link color */
+  }
+  
+  .term-links li a:hover {
+    color: black; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .info-links li a {
+    
+    
+    text-decoration: none; /* Remove default underline */
+    color: white; /* Set default link color */
+  }
+  
+  .info-links li a:hover {
+    color: black; /* Change color on hover */
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  #info-loc {
+   
+    text-align: left; /* Justify the text */
+    
+  
   }
   
   
