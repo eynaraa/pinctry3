@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/9095ef6470.js" crossorigin="anonymous"></script>
+  <title>Contact Us</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/pinclog.png" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/contact.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Open+Sans:wght@400;500;700&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  </style>
+</head>
+
+<body id="top">
+
+<!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="index.html">
+        <h1 class="logo"><img class="logopinc" src="./assets/images/pincheader2.png" alt="" width="90px" height="auto"; ></h1>
+      </a>
+
+      <button class="nav-toggle-btn" aria-label="Toggle Menu" data-nav-toggle-btn>
+        <ion-icon name="menu-outline" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" class="close-icon"></ion-icon>
+      </button>
+
+      <nav class="navbar container">
+        <ul class="navbar-list">
+    
+          <li>
+            
+            <select name="solution" id="solution" class="navbar-link" onchange="redirectToPage()">
+              <option selected disabled hidden>Solutions</option>
+              <option value="software.html">Software</option>
+              <optgroup label="Hardware">
+                <option value="telecom.html">Telecom</option>
+                
+                <option value="power.html">Power System</option>
+              </optgroup>
+              <option value="service.html">Service</option>
+            </select>
+            
+
+          </li>
+                
+            <li>
+                <a href="about.html" class="navbar-link" data-nav-link>About Us</a>
+            </li>
+    
+            <li>
+                <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
+            </li>
+    
+            <li>
+                <a href="jobs.html" class="navbar-link" data-nav-link>Career</a>
+            </li>
+    
+            <li>
+                <a href="#contact" class="btn btn-primary">Contact Us</a>
+            </li>
+    
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+<section class="section contact" id="contact">
+    <div class="container">
+
+      <div class="contact-card">
+
+        <p class="card-subtitle"><b>Don't be shy</b></p>
+
+        <h2 class="h2 section-title">Get in touch with us!</h2>
+
+        <div class="wrapper">
+
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+
+                <input type="hidden" name="access_key" value="a4a508e8-be41-4cfc-b13d-ac6a31034e90">
+
+                <input type="text" name="name" placeholder="Name" required class="contact-input">
+
+                <input type="email" name="email" placeholder="Email" required class="contact-input">
+
+                <textarea name="message" placeholder="Message" required class="contact-input"></textarea>
+
+                <button type="submit" class="btn-submit">Submit Message</button>
+
+            </form>
+
+          <ul class="contact-list">
+
+            <li class="contact-item">
+
+              <div class="contact-icon">
+                <ion-icon name="location"></ion-icon>
+              </div>
+
+              <div>
+                <h3 class="contact-item-title">Address</h3>
+
+                <address class="contact-item-link">
+                  48, Jalan Rugbi 13/30, Tadisma Business Park, 40100 Shah Alam, Selangor
+                </address>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="contact-icon">
+                <ion-icon name="phone-portrait-outline"></ion-icon>
+              </div>
+
+              <div>
+                <h3 class="contact-item-title">Phone</h3>
+
+                <a href="mailto:hello@ethan.com" class="contact-item-link">+603 5524 2969</a>
+              </div>
+
+            </li>
+
+            <li class="contact-item">
+
+              <div class="contact-icon">
+                <ion-icon name="call"></ion-icon>
+              </div>
+
+              <div>
+                <h3 class="contact-item-title">Fax</h3>
+
+                <a href="tel:+603 5524 7229" class="contact-item-link">+603 5524 7229</a>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+<!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+    <div class="container-foot">
+      <div class="footer-content">
+        <div class="footer-section">
+
+          <ul class="term-links">
+            <li>
+              
+              <a href="#" id="info-loc"><i class="fa-solid fa-location-dot" ></i>&ensp;48, Jalan Rugbi 13/30 Tadisma<br>&ensp;&ensp;Business Park, 40100 Shah,<br>&ensp;&ensp;Selangor</a>
+              
+            </li>
+          </ul>
+          
+          
+        </div>
+        <div class="footer-section">
+          
+          <ul class="info-links">
+            
+            <li><a href="tel:+603 5524 2969"><i class="fa-solid fa-phone" id="tel-link"></i>&ensp;+603 5524 2969</a></li>
+            <li><a href="tel:+603 5524 7229"><i class="fa-solid fa-fax"></i>&ensp;+603 5524 7229</a></li>
+            <li><a href="mailto:nazihah@pinc.my"><i class="fa-solid fa-envelope"></i>&ensp;nazihah@pinc.my</a></li>
+            
+          </ul>
+        </div>
+        <div class="footer-section">
+          
+          <ul class="term-links">
+            <li>
+              <a href="#">Terms & Conditions</a>|
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <br>
+          
+          
+        </div>
+        <div class="footer-section">
+          
+          
+          <ul class="term-links">
+            <li>
+              <a href="https://www.facebook.com/p/Pinc-Technology-Sdn-Bhd-100063452475947/"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                <a href="https://www.linkedin.com/company/pinc-technology-sdn-bhd/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
+
+      <br>
+      <div class="copyright">
+        &copy; 2024 <a href="#" class="copyright-link">PINC TECHNOLOGY SDN BHD.</a>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-to-top" data-back-to-top>BACK TOP</a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+  <script>
+    function redirectToPage() {
+      var selectBox = document.getElementById("solution");
+      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+  
+      if(selectedValue !== "") {
+        window.location.href = selectedValue;
+      }
+    }
+
+  </script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
