@@ -52,29 +52,40 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="index.html" class="navbar-link" data-nav-link>Solutions</a>
+            
+            <select name="solution" id="solution" class="navbar-link" onchange="redirectToPage()">
+              <option selected disabled hidden>Solutions</option>
+              <option value="software.html">Software</option>
+              <optgroup label="Hardware">
+                <option value="telecom.html">Telecom</option>
+                
+                <option value="power.html">Power System</option>
+              </optgroup>
+              <option value="service.html">Service</option>
+            </select>
+            
+
           </li>
 
           <li>
-            <a href="about.html" class="navbar-link" data-nav-link>About Us</a>
+            <a href="about.html" class="navbar-link" data-nav-link>About</a>
+          </li>
+
+          <li>
+            <a href="jobs.html" class="navbar-link" data-nav-link>Jobs</a>
           </li>
 
           <li>
             <a href="blog.html" class="navbar-link" data-nav-link>Blog</a>
           </li>
 
-          <li>
-            <a href="jobs.html" class="navbar-link" data-nav-link>Career</a>
-          </li>
-
-<!--           <li>
-            <a href="contact.html" class="navbar-link" data-nav-link>Contact Us</a>
+          <!-- <li>
+            <a href="contact.html" class="navbar-link" data-nav-link>Contact</a>
           </li> -->
 
           <li>
             <a href="contact.html" class="btn btn-primary">Contact Us</a>
           </li>
-
         </ul>
       </nav>
 
@@ -421,9 +432,9 @@
             <p class="section-text">
 
               
-              As one of the leading LiFePO4 battery pack companies in Malaysia, we are experienced in customized battery and have an RND team.<br><br>
+              As one of the leading LiFePO4 battery pack companies in Malaysia, we are experienced in customized battery and have an RND team.
 
-              We developed BMS with an active balance function for industrial batteries, which is very advance and competitive in quality and cost.<br><br>
+              We developed BMS with an active balance function for industrial batteries, which is very advance and competitive in quality and cost.
 
               We keep improving our products and offer technical updates with our long-term customers, and give regular training for our customers.
 
@@ -812,22 +823,59 @@
   -->
 
   <footer class="footer">
-    <div class="container">
+    <div class="container-foot">
+      <div class="footer-content">
+        <div class="footer-section">
 
-      <p class="copyright">
-        &copy; 2024 <a href="#" class="copyright-link">PINC TECHNOLOGY SDN BHD</a>. 
-      </p>
+          <ul class="term-links">
+            <li>
+              
+              <a href="#" id="info-loc"><i class="fa-solid fa-location-dot" ></i>&ensp;48, Jalan Rugbi 13/30 Tadisma<br>&ensp;&ensp;Business Park, 40100 Shah,<br>&ensp;&ensp;Selangor</a>
+              
+            </li>
+          </ul>
+          
+          
+        </div>
+        <div class="footer-section">
+          
+          <ul class="info-links">
+            
+            <li><a href="tel:+603 5524 2969"><i class="fa-solid fa-phone" id="tel-link"></i>&ensp;+603 5524 2969</a></li>
+            <li><a href="tel:+603 5524 7229"><i class="fa-solid fa-fax"></i>&ensp;+603 5524 7229</a></li>
+            <li><a href="mailto:nazihah@pinc.my"><i class="fa-solid fa-envelope"></i>&ensp;nazihah@pinc.my</a></li>
+            
+          </ul>
+        </div>
+        <div class="footer-section">
+          
+          <ul class="term-links">
+            <li>
+              <a href="#">Terms & Conditions</a>|
+              <a href="#">Privacy Policy</a>
+            </li>
+          </ul>
+          <br>
+          
+          
+        </div>
+        <div class="footer-section">
+          
+          
+          <ul class="term-links">
+            <li>
+              <a href="https://www.facebook.com/p/Pinc-Technology-Sdn-Bhd-100063452475947/"><i class="fa-brands fa-facebook-f fa-lg"></i></a>
+                <a href="https://www.linkedin.com/company/pinc-technology-sdn-bhd/"><i class="fa-brands fa-linkedin fa-xl"></i></a>
+            </li>
+          </ul>
+        </div>
+        
+      </div>
 
-      <ul class="footer-list">
-        <li>
-          <a href="#" class="footer-link">Terms & Condition</a>
-        </li>
-
-        <li>
-          <a href="#" class="footer-link">Privacy Policy</a>
-        </li>
-      </ul>
-
+      <br>
+      <div class="copyright">
+        &copy; 2024 <a href="#" class="copyright-link">PINC TECHNOLOGY SDN BHD.</a>
+      </div>
     </div>
   </footer>
 
@@ -849,6 +897,17 @@
     - custom js link
   -->
   <script src="./assets/js/script.js"></script>
+  <script>
+    function redirectToPage() {
+      var selectBox = document.getElementById("solution");
+      var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+  
+      if(selectedValue !== "") {
+        window.location.href = selectedValue;
+      }
+    }
+
+  </script>
 
   <!-- 
     - ionicon link
