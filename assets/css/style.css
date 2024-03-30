@@ -259,7 +259,7 @@ body {
   
 }
 
-.section { padding-block: var(--section-padding); }
+.section { padding-block: 100px; }
 
 .section-subtitle {
   color: #9e1f63;
@@ -354,11 +354,20 @@ body {
 }
 
 .navbar-link {
-  color: var(--white);
+  color: white;
   font-family: var(--ff-barlow);
   padding-block: 3px;
   transition: var(--transition-1);
+  background-color: transparent;
+  
+  border: transparent;
 }
+
+.navbar-link select {
+  background-color: transparent;
+}
+
+
 
 .navbar-link:is(:hover, :focus) { color: #9e1f63; }
 
@@ -605,7 +614,7 @@ body {
 
 .contact .section-title {
   text-align: left;
-  margin-block-end: 30px;
+  margin-block-end: 50px;
   color: white;
 }
 
@@ -680,7 +689,7 @@ textarea.contact-input {
   #BLOG
 \*-----------------------------------*/
 
-.blog { padding-block-end: 120px; }
+
 
 .blog .section-title { margin-block-end: 20px; text-align: center;}
 
@@ -826,7 +835,11 @@ textarea.contact-input {
   font-weight: var(--fw-600);
 }
 
-.copyright-link:is(:hover, :focus) { color: #0d544d; }
+
+
+.copyright-link:is(:hover, :focus) { color: black; }
+
+
 
 .footer-list {
   max-width: max-content;
@@ -839,7 +852,7 @@ textarea.contact-input {
 
 .footer-link { transition: var(--transition-2); color: white; }
 
-.footer-link:is(:hover, :focus) { color: #0d544d; }
+.footer-link:is(:hover, :focus) { color: black; }
 
 
 
@@ -1278,7 +1291,7 @@ textarea.contact-input {
    * BLOG
    */
 
-  .blog { padding-block-end: 180px; }
+  .blog { padding-block-end: 100px; padding-block-start: 100px;}
 
   .blog-list {
     grid-template-columns: repeat(4, 1fr);
@@ -1346,6 +1359,17 @@ textarea.contact-input {
     }
 }
 
+select option {
+  color: black;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+select optgroup {
+  color: black;
+  font-size: 15px;
+}
+
 
 
 select {
@@ -1353,6 +1377,7 @@ select {
   color: white;
   border: transparent;
   font-size: 18px;
+  text-align: justify;
 }
 
 .socmed {
@@ -1360,9 +1385,9 @@ select {
 }
 
 .blog .section-partner {
-  margin-block-start: 150px;
+  margin-block-start: 50px;
   text-align: center; 
-  margin-block-end: 50px;
+  margin-block-end: 30px;
   
 }
 
@@ -1370,6 +1395,7 @@ select {
   display: grid;
   gap: 5px;
   margin-block-start: 100px;
+  
 }
 
 .partner-card .card-banner {
@@ -1415,3 +1441,116 @@ select {
   place-content: end;
   padding: 15px 15px;
 }
+
+
+.section-service {
+  color: black;
+}
+
+.location {
+  width: 220px;
+}
+
+.footer {
+  background-color:#9e1f63;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+.container-foot {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  flex: 1;
+  margin-right: 2px;
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 5px;
+}
+
+/* .footer-section ul li:hover{
+  color: black;
+}
+
+.footer-section ul li a:hover {
+  color: black;
+} */
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+  .footer-content {
+    flex-direction: column;
+  }
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.social-links a {
+  
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between icons if needed */
+  text-decoration: none; /* Remove default underline */
+  color: white; /* Set default link color */
+  
+}
+
+.social-links li a:hover {
+  color: black; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.term-links li a {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between links if needed */
+  text-decoration: none; /* Remove default underline */
+  color: white; /* Set default link color */
+}
+
+.term-links li a:hover {
+  color: black; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+.info-links li a {
+  
+  
+  text-decoration: none; /* Remove default underline */
+  color: white; /* Set default link color */
+}
+
+.info-links li a:hover {
+  color: black; /* Change color on hover */
+  text-decoration: underline; /* Underline on hover */
+}
+
+#info-loc {
+  
+  text-align: left; /* Justify the text */
+  
+
+}
+
