@@ -52,12 +52,19 @@
         <ul class="navbar-list">
 
           <li>
+            
             <select name="solution" id="solution" class="navbar-link" onchange="redirectToPage()">
               <option selected disabled hidden>Solutions</option>
               <option value="software.html">Software</option>
-              <option value="hardware.html">Hardware</option>
+              <optgroup label="Hardware">
+                <option value="telecom.html">Telecom</option>
+                
+                <option value="power.html">Power System</option>
+              </optgroup>
               <option value="service.html">Service</option>
             </select>
+            
+
           </li>
               
           <li>
