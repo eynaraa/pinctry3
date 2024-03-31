@@ -52,9 +52,20 @@
         <ul class="navbar-list">
 
           <li>
-            <a href="index.html" class="navbar-link" data-nav-link>Home</a>
-          </li>
+            
+            <select name="solution" id="solution" class="navbar-link" onchange="redirectToPage()">
+              <option selected disabled hidden>Solutions</option>
+              <option value="software.html">Software</option>
+              <optgroup label="Hardware">
+                <option value="telecom.html">Telecom</option>
+                
+                <option value="power.html">Power System</option>
+              </optgroup>
+              <option value="service.html">Service</option>
+            </select>
+            
 
+          </li>
           <li>
             <a href="about.html" class="navbar-link" data-nav-link>About</a>
           </li>
