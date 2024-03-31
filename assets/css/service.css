@@ -361,13 +361,23 @@
   }
   
   .navbar-link {
-    color: var(--white);
-    font-family: var(--ff-barlow);
-    padding-block: 3px;
-    transition: var(--transition-1);
-  }
-  
-  .navbar-link:is(:hover, :focus) { color: #9e1f63; }
+  color: white;
+  font-family: var(--ff-barlow);
+  padding-block: 3px;
+  transition: var(--transition-1);
+  background-color: transparent;
+  font-size: 18px;
+  border: transparent;
+}
+
+.navbar-link select {
+  background-color: transparent;
+  color: black;
+}
+
+
+
+.navbar-link:is(:hover, :focus) { color: #9e1f63; }
   
   .navbar .btn {
     background-color: #9e1f63 ;
@@ -1702,16 +1712,6 @@
   
   }
 
-  select option {
-    color: black;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-  }
-  
-  select optgroup {
-    color: black;
-    font-size: 15px;
-  }
   
   
   
