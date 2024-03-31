@@ -363,11 +363,21 @@
   }
   
   .navbar-link {
-    color: var(--white);
+    color: white;
     font-family: var(--ff-barlow);
     padding-block: 3px;
     transition: var(--transition-1);
+    background-color: transparent;
+    font-size: 18px;
+    border: transparent;
   }
+  
+  .navbar-link select {
+    background-color: transparent;
+    color: black;
+  }
+  
+  
   
   .navbar-link:is(:hover, :focus) { color: #9e1f63; }
   
