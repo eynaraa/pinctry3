@@ -1545,16 +1545,19 @@
   
   }
 
+select option {
+      color: black;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 15px;
+    }
+    
+    select optgroup {
+      color: black;
+      font-size: 15px;
+    }
+
   
   
   
-  
-  select {
-    background-color: transparent;
-    color: white;
-    border: transparent;
-    font-size: 18px;
-    text-align: justify;
-  }
   
   
