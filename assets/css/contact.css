@@ -1271,6 +1271,17 @@
     font-size: 18px;
   }
 
+select option {
+      color: black;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 15px;
+    }
+    
+    select optgroup {
+      color: black;
+      font-size: 15px;
+    }
+
   
     
     
