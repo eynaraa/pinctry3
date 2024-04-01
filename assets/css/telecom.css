@@ -1518,6 +1518,17 @@ select {
   text-align: justify;
 }
 
+select option {
+   color: black;
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 15px;
+}   
+    
+select optgroup {
+    color: black;
+    font-size: 15px;
+}
+
 .socmed {
   grid-template-columns: 15px;
 }
